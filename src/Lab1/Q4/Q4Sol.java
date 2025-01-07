@@ -1,4 +1,4 @@
-package Day1.Q4;
+package Lab1.Q4;
 
 import java.util.Scanner;
 

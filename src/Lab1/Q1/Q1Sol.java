@@ -1,4 +1,4 @@
-package Day1.Q1;
+package Lab1.Q1;
 
 public class Q1Sol {
     public static float fibonnaci(int n) {

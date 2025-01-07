@@ -1,4 +1,4 @@
-package Day1.Q3;
+package Lab1.Q3;
 
 public class Q3Sol {
     public static int[] copyOf(int[] array) {
