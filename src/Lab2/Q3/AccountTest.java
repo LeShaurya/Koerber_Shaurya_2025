@@ -2,15 +2,6 @@ package Lab2.Q3;
 
 import java.util.Scanner;
 
-class Bank {
-    private Account account;
-
-    public Bank(Account account) {
-        this.account = account;
-    }
-}
-
-
 public class AccountTest {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
