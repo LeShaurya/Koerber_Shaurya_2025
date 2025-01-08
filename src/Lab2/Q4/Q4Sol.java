@@ -11,7 +11,9 @@ public class Q4Sol {
         employees.add(e);
         e = new HourlyEmployee("Rohit", 3, 20, 2);
         employees.add(e);
-        for(Employee employee : employees)
+        for(Employee employee : employees) {
+            System.out.println(employee);
             System.out.println(employee.payment());
+        }
     }
 }

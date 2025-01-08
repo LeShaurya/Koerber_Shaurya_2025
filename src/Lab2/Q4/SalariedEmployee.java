@@ -17,4 +17,12 @@ public class SalariedEmployee extends Employee{
     public void increaseSalaryByPercentage(int percent) {
         weeklySalary += weeklySalary * ((double) percent / 100);
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", SalariedEmployee{" +
+                "weeklySalary=" + weeklySalary +
+                "}}";
+    }
+
 }

@@ -27,4 +27,12 @@ public class CommisionEmployee extends Employee{
     public void increaseSalaryByPercentage(int percent) {
         commissionPercentage += commissionPercentage * ((double) percent / 100);
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", CommissionEmployee{" +
+                "commissionPercentage=" + commissionPercentage +
+                ", totalSales=" + totalSales +
+                "}}";
+    }
 }

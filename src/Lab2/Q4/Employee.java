@@ -17,6 +17,13 @@ abstract class Employee {
         return employeeId;
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "employeeName='" + employeeName + '\'' +
+                ", employeeId=" + employeeId;
+    }
+
     abstract public double payment();
 
     abstract public void increaseSalaryByPercentage(int percent);

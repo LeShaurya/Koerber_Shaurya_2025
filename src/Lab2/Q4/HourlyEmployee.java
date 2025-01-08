@@ -10,6 +10,14 @@ public class HourlyEmployee extends Employee{
         this.noOfHours = noOfHours;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + ", HourlyEmployee{" +
+                "hourRate=" + hourRate +
+                ", noOfHours=" + noOfHours +
+                "}}";
+    }
+
     public int getNoOfHours() {
         return noOfHours;
     }
