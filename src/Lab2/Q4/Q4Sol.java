@@ -14,6 +14,8 @@ public class Q4Sol {
         for(Employee employee : employees) {
             System.out.println(employee);
             System.out.println(employee.payment());
+            employee.increaseSalaryByPercentage(5);
+            System.out.println(employee.payment());
         }
     }
 }

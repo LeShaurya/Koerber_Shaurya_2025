@@ -25,6 +25,5 @@ abstract class Employee {
     }
 
     abstract public double payment();
-
     abstract public void increaseSalaryByPercentage(int percent);
 }
