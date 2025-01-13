@@ -1,13 +1,8 @@
-package Lab3.Q1;
+package Lab3.Q2;
 
 import java.io.*;
 
-public class Q1Sol {
-    public static void main(String[] args) {
-        usingCharacterStream(); // gives the wrong output
-        usingByteStream(); // gives the correct output
-    }
-
+public class Performance {
     public static void usingByteStream() {
         try(BufferedInputStream bis = new BufferedInputStream(new FileInputStream("img.png"));
             BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("op1.png"))) {
@@ -38,5 +33,19 @@ public class Q1Sol {
         } catch (IOException e) {
             System.out.println("IO error occurred");
         }
+    }
+
+    public static void main(String[] args) {
+        long startTimeNonBuffered = System.currentTimeMillis();
+        usingCharacterStream();
+        long endTimeNonBuffered = System.currentTimeMillis();
+        long durationNonBuffered = endTimeNonBuffered - startTimeNonBuffered;
+        System.out.println("For Character stream the time takes is:" + durationNonBuffered + " ms");
+
+        startTimeNonBuffered = System.currentTimeMillis();
+        usingByteStream();
+        endTimeNonBuffered = System.currentTimeMillis();
+        durationNonBuffered = endTimeNonBuffered - startTimeNonBuffered;
+        System.out.println("For Byte stream the time takes is:" + durationNonBuffered + " ms");
     }
 }

@@ -11,7 +11,7 @@ public class BookList {
     public BookList(String filePath) {
         String line = null;
 //        this throws IO Exception (Buffered Reader)
-        try (BufferedReader br = new BufferedReader(new FileReader(new File(filePath)))){
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))){
             while((line = br.readLine()) != null) {
                 String[] tokens = line.split(":");
                 Book book = new Book(Integer.parseInt(tokens[0]),
