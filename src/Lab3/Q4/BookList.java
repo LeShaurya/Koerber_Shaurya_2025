@@ -29,7 +29,7 @@ public class BookList {
         }
     }
 
-    public Book searchBooks(int id) {
+    public Book searchBooks(int id) throws BookNotFoundException{
         Book returnedBook = null;
         for(Book book : bookList) {
             if(book.getId() == id) {
@@ -49,7 +49,7 @@ public class BookList {
         }
     }
 
-    public void sellBooks(String isbn, int noOfCopies) {
+    public void sellBooks(String isbn, int noOfCopies) throws InvalidCountException, BookNotFoundException, NotSufficientBooksException{
         if(noOfCopies < 0) {
             throw new InvalidCountException("Book count cannot be negative");
         }
@@ -69,7 +69,7 @@ public class BookList {
         returnedBook.setNoOfCopies(returnedBook.getNoOfCopies() - noOfCopies);
     }
 
-    public void purchaseBooks(String isbn, int noOfCopies) {
+    public void purchaseBooks(String isbn, int noOfCopies) throws InvalidCountException, BookNotFoundException{
         if(noOfCopies < 0) {
             throw new InvalidCountException("Book count cannot be negative");
         }
