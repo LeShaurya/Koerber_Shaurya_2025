@@ -1,7 +1,6 @@
 package lab8_9.Q1;
 
 import java.util.*;
-import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
