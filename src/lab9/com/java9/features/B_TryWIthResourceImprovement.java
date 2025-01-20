@@ -2,6 +2,7 @@ package lab9.com.java9.features;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 class DoSideWork implements AutoCloseable{
     public DoSideWork(){
         System.out.println("crt of DoSideWork");
@@ -29,6 +30,11 @@ class Work implements AutoCloseable{
 }
 public class B_TryWIthResourceImprovement {
     public static void main(String[] args) {
-
+        try(DoSideWork rs1 = new DoSideWork(); Work rs2 = new Work()) {
+            rs1.doSideWork();;
+            rs2.doWork();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }

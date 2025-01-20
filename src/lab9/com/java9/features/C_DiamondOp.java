@@ -15,6 +15,7 @@ class B extends  A{
 }
 public class C_DiamondOp {
     public static void main(String[] args) {
-
+        List<A> list=new ArrayList<>(Arrays.asList(new A(), new B(), new A(), new B()));
+        list.forEach(A::foo);
     }
 }
